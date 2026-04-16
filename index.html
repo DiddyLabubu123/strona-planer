@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natan-Planer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontener">
+        <header>
+            <h1>Natan-Planer</h1>
+        </header>
+
+        <div class="sekcja-dodawania">
+            <input type="text" id="poleZadania" placeholder="Co masz do zrobienia?">
+            <select id="wyborPriorytetu">
+                <option value="niski">Niski</option>
+                <option value="sredni" selected>Średni</option>
+                <option value="wysoki">Wysoki</option>
+            </select>
+            <button id="przyciskDodaj">Dodaj do listy</button>
+        </div>
+
+        <div class="sekcja-filtrow">
+            <button class="filtr-btn aktywny" data-typ="wszystkie">Wszystkie</button>
+            <button class="filtr-btn" data-typ="w-toku">W toku</button>
+            <button class="filtr-btn" data-typ="zrobione">Zrobione</button>
+        </div>
+
+        <ul id="listaZadan"></ul>
+
+        <div class="podsumowanie">
+            <p>Liczba zadań: <span id="licznikZadan">0</span></p>
+            <button id="wyczyscWszystko">Usuń wszystko</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
